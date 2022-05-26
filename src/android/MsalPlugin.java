@@ -557,6 +557,7 @@ public class MsalPlugin extends CordovaPlugin {
     private JSONArray processClaims(Map<String, ?> claims) {
         JSONArray claimsArr = new JSONArray();
         if (claims == null) {
+            MsalPlugin.this.callbackContext.info("No claims found");
             return claimsArr;
         }
         for (Map.Entry<String, ?> claim : claims.entrySet()) {
