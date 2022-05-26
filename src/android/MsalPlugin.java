@@ -547,7 +547,6 @@ public class MsalPlugin extends CordovaPlugin {
         try {
             acct.put("id", account.getId());
             acct.put("username", account.getUsername());
-            //acct.put("claims", processClaims(account.getClaims()));
         } catch (JSONException e) {
             MsalPlugin.this.callbackContext.error(e.getMessage());
         }
