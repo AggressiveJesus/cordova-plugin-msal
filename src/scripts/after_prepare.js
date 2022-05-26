@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const config = JSON.parse(fs.readFileSync('platforms/browser/browser.json').toString());
+//const config = JSON.parse(fs.readFileSync('platforms/browser/browser.json').toString());
 const CLIENT_ID = `'${config.installed_plugins["cordova-plugin-msal"].CLIENT_ID}'`;
 const TENANT_ID = `'${config.installed_plugins["cordova-plugin-msal"].TENANT_ID}'`;
 
