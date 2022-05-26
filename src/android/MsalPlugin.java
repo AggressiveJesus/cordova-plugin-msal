@@ -547,6 +547,7 @@ public class MsalPlugin extends CordovaPlugin {
         try {
             acct.put("id", account.getId());
             acct.put("username", account.getUsername());
+            acct.put("claims", processClaims(account.getClaims()));
         } catch (JSONException e) {
             MsalPlugin.this.callbackContext.error(e.getMessage());
         }
@@ -555,6 +556,9 @@ public class MsalPlugin extends CordovaPlugin {
 
     private JSONArray processClaims(Map<String, ?> claims) {
         JSONArray claimsArr = new JSONArray();
+        if (claims == null) {
+            return claimsArr;
+        }
         for (Map.Entry<String, ?> claim : claims.entrySet()) {
             try {
                 JSONObject claimObj = new JSONObject();
