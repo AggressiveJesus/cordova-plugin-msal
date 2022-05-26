@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
-        id="cordova-plugin-msal" version="3.0.0-alpha.1">
+        id="cordova-plugin-msal" version="3.0.0-alpha.4">
     <name>Cordova MSAL Plugin</name>
     <description>A Cordova plugin providing a wrapper for Microsoft's MSAL library for Android and iOS.</description>
     <author>Walter Robins</author>
     <keywords>cordova,android,outsystems,ios,microsoft,msal,azure,graphapi,authentication</keywords>
     <license>Apache 2.0</license>
-    <repo>https://github.com/wrobins/cordova-plugin-msal.git</repo>
-    <issue>https://github.com/wrobins/cordova-plugin-msal/issues</issue>
+    <repo>https://github.com/AggressiveJesus/cordova-plugin-msal.git</repo>
+    <issue>https://github.com/AggressiveJesus/cordova-plugin-msal/issues</issue>
     <engines>
         <engine name="cordova-android" version=">=8.1.0"/>
         <engine name="cordova-ios" version=">=5.1.1"/>
@@ -50,7 +50,7 @@
         <config-file target="config.xml" parent="/*">
             <preference name="AndroidXEnabled" value="true" />
         </config-file>
-        <source-file src="src/android/MsalPlugin.java" target-dir="src/com/wrobins/cordova/plugin" />
+        <source-file src="src/android/MsalPlugin.java" target-dir="src/com/AggressiveJesus/cordova/plugin" />
         <framework src="src/android/build-extras.gradle" custom="true" type="gradleReference" />
     </platform>
     <platform name="ios">
